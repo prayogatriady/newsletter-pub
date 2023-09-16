@@ -19,8 +19,8 @@ Explain how to install your Go project. Include any prerequisites, dependencies,
 ### Prerequisites
 
 1. [Login](https://cloud.google.com/) to your GCP Account and [create](https://cloud.google.com/iam/docs/keys-create-delete) your `credential.json` file for Google Pub/Sub.
-2. [Create](https://cloud.google.com/pubsub/docs/create-topic) Google Pub/Sub topic
-2. [Create](https://www.getmailbird.com/gmail-app-password/) your Gmail app password (App password will be used in [the subscriber repository](https://github.com/prayogatriady/newsletter-sub))
+2. [Create](https://cloud.google.com/pubsub/docs/create-topic) Google Pub/Sub topic.
+2. [Create](https://www.getmailbird.com/gmail-app-password/) your Gmail app password. (App password will be used in [the subscriber repository](https://github.com/prayogatriady/newsletter-sub))
 
 ### Installation
 
@@ -40,7 +40,7 @@ cd newsletter-pub
 PROJECT_ID=your-gcp-projectId
 TOPIC_NAME=your-pubsub-topicName
 ```
-4. Move to your `credential.json` file the project root directory
+4. Move your `credential.json` file to the project root directory
 
 5. Get golang dependencies
 ```sh
@@ -52,7 +52,7 @@ go mod tidy
 go run .
 ```
 
-6. Send a HTTP POST request to `localhost:8000/api/email/sendEmail`
+7. Send a HTTP POST request to this repository `localhost:8000/api/email/sendEmail`
 ```sh
 {
     "recipient_list": [
@@ -77,7 +77,7 @@ go run .
 ```
 
 #### The messages should be sent one by one asynchronously to your Google Pub/Sub topic.
-#### Let's move to the [publisher repository.](https://github.com/prayogatriady/newsletter-pub)
+#### Let's move to the [subscriber repository.](https://github.com/prayogatriady/newsletter-sub)
 
 ## Project Description
 

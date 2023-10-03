@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"newsletter-pub/api/v1/lost"
+	lost "newsletter-pub/api/v1/lostinspace"
 	"newsletter-pub/http/router"
 	"newsletter-pub/utils/config"
 
